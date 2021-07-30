@@ -57,7 +57,7 @@ Asena.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
         if (!!message.mention && message.mention[0] == '919544846609@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true})
         }
-const array = ['Elsa','Di','Ok','Sed','Friend','Kannappi','Group','Single','Alamb','Bgm','Moodesh','Song','Thyr','Jihad','Ok bie','help','Adi','Anthas','Boss','Pubg','Free Fire','Kali','Kaztro','mention','Hi','Da','Name','Shahul','Bot','bot','song','hlo','Hlo','power','love','Lub','message','myre','mess','power','love','Lub','message','myre','mess','owner']
+const array = ['hlo','owner','da','Da','Ha','oompi','ok','oomp','oompikko','shani','Uff','bie','cheera','veerappan','mp3','photo','sticker','myre','pever','song','hitler','poli','aara','bgm1','bgm5','ayin','ayn','Lucky','sed','mubaris','Hi','undachu','chrizonedance','Johnwick','poda','bgm2','kittilla','meir','chrizrevenge','chrizmess','m4','oh','bgm3','chrizlub','surya','Achu','alive','chrizmon','Vichu sir','johnwick']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
@@ -66,7 +66,7 @@ if(pattern.test(message.message)){
 });
     }
     var filtreler = await FilterDb.getFilter(message.jid);
-    if (!filtreler) return; 
+    if (!filtreler) return
     filtreler.map(
         async (filter) => {
             pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
